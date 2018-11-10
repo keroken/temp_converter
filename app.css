@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.app-header {
+    height: 60px;
+    width: 100%;
+    background-color: lightseagreen;
+    color: white;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.app-main {
+    display: flex;
+}
+
+.column {
+    width: 50%;
+    padding: 20px;
+}
+
+.number-input {
+    overflow:visible;
+    padding:8px;
+    display:block;
+    border:1px solid #bbb;
+    width:100%;
+}
+
+@media (max-width: 600px) {
+    .app-main{
+        display: block;
+    }
+    .column {
+        width: 100%;
+    }
+}
