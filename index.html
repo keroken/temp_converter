@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name =" apple-mobile-web-app-capable" content="yes">
+    <meta name =" apple-mobile-web-app-status-bar-style" content="lightgreen">
+    <meta name =" apple-mobile-web-app-title" content="temp-converter">
+    <link rel =" apple-touch-icon" href="apple-touch-icon.png">
     <title>Temp Converter</title>
     <link rel="stylesheet" href="app.css">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <header class="app-header">
@@ -24,6 +28,20 @@
             </div>
         </div>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    const apikey = encodeURIComponent(functions.config().api.key);
+    var config = {
+        apiKey: apikey,
+        authDomain: "temp-converter-41c04.firebaseapp.com",
+        databaseURL: "https://temp-converter-41c04.firebaseio.com",
+        projectId: "temp-converter-41c04",
+        storageBucket: "temp-converter-41c04.appspot.com",
+        messagingSenderId: "81767716853"
+    };
+    firebase.initializeApp(config);
+    </script>
     <script src="app.js" async></script>
     <script type="application/javascript">
         if ('serviceWorker' in navigator) {
