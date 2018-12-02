@@ -32,11 +32,12 @@
     <script>
     // Initialize Firebase
     const apikey = encodeURIComponent(functions.config().api.key);
+    const projectid = encodeURIComponent(functions.config().project.id);
     var config = {
         apiKey: apikey,
         authDomain: "temp-converter-41c04.firebaseapp.com",
         databaseURL: "https://temp-converter-41c04.firebaseio.com",
-        projectId: "temp-converter-41c04",
+        projectId: projectid,
         storageBucket: "temp-converter-41c04.appspot.com",
         messagingSenderId: "81767716853"
     };
